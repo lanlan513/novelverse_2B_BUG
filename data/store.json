@@ -1,0 +1,263 @@
+{
+  "users": [
+    {
+      "id": "user-demo",
+      "name": "林舟",
+      "handle": "linzhou",
+      "initials": "LZ"
+    }
+  ],
+  "projects": [
+    {
+      "id": "proj-salt-wind",
+      "title": "盐与风的航线",
+      "description": "在潮汐尽头，寻找一座不存在的岛。",
+      "visibility": "private",
+      "cover": {
+        "kind": "image",
+        "value": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80",
+        "name": "salt-wind.jpg"
+      },
+      "ownerId": "user-demo",
+      "createdAt": "2026-09-08T09:30:00.000Z",
+      "updatedAt": "2026-09-16T10:24:00.000Z",
+      "draft": {
+        "id": "draft-salt-wind",
+        "content": "潮水退去以后，港口只剩下一种颜色。\n\n我把地图折成四份，塞进旧风衣的内袋。",
+        "version": 7,
+        "updatedAt": "2026-09-16T10:24:00.000Z"
+      },
+      "sharedStatus": "private"
+    },
+    {
+      "id": "proj-lanterns",
+      "title": "午夜图书馆",
+      "description": "每一本被遗忘的书，都在午夜后亮起一盏灯。",
+      "visibility": "shared",
+      "cover": {
+        "kind": "image",
+        "value": "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=800&q=80",
+        "name": "library.jpg"
+      },
+      "ownerId": "user-demo",
+      "createdAt": "2026-08-22T12:10:00.000Z",
+      "updatedAt": "2026-09-12T16:40:00.000Z",
+      "draft": {
+        "id": "draft-lanterns",
+        "content": "图书馆在午夜十二点准时醒来。",
+        "version": 3,
+        "updatedAt": "2026-09-12T16:40:00.000Z"
+      },
+      "sharedStatus": "shared"
+    }
+  ],
+  "notes": [
+    {
+      "id": "note-70ccaba5-b182-461e-a7ac-106b774df59d",
+      "ownerId": "user-demo",
+      "chapterId": "ch3",
+      "type": "character",
+      "content": "黛玉进府的“行为准则”：八个字写出寄人篱下的处境，也为她此后敏感自尊的性格定调。",
+      "anchor": {
+        "quote": "因此步步留心，时时在意，不肯轻易多说一句话，多行一步路，惟恐被人耻笑了他去。",
+        "prefix": "吃穿用度，已是不凡了，何况今至其家。",
+        "suffix": "\n自上了轿，进入城中，从纱窗中瞧了一",
+        "paraHint": "c3-01"
+      },
+      "quote": "因此步步留心，时时在意，不肯轻易多说一句话，多行一步路，惟恐被人耻笑了他去。",
+      "createdAt": "2026-09-17T12:05:58.892Z",
+      "updatedAt": "2026-09-17T12:06:00.495Z",
+      "deleted": false
+    },
+    {
+      "id": "note-1d1b1432-27f2-4f57-9760-85c9b4729749",
+      "ownerId": "user-demo",
+      "chapterId": "ch3",
+      "type": "language",
+      "content": "“搀”与“鬓发如银”两处细节：既见贾母年高尊贵，也见府中规矩排场。脂本作“黛玉方进入房时……”，仅句读小异。",
+      "anchor": {
+        "quote": "黛玉方进入房时，只见两个人搀着一位鬓发如银的老母迎上来",
+        "prefix": "，一面听得人回话：“林姑娘到了。”\n",
+        "suffix": "，黛玉便知是他外祖母。方欲拜见时，早",
+        "paraHint": "c3-05"
+      },
+      "quote": "黛玉方进入房时，只见两个人搀着一位鬓发如银的老母迎上来",
+      "createdAt": "2026-09-17T12:05:58.893Z",
+      "updatedAt": "2026-09-17T12:05:58.893Z",
+      "deleted": false
+    },
+    {
+      "id": "note-ca3f3f58-47c2-45a7-81ae-22d5907c7225",
+      "ownerId": "user-demo",
+      "chapterId": "ch3",
+      "type": "character",
+      "content": "王熙凤的“出场定评”。美貌、威势、机锋全在对仗里；“笑先闻”也呼应她先声夺人的登场方式。",
+      "anchor": {
+        "quote": "粉面含春威不露，丹唇未启笑先闻。",
+        "prefix": "两弯柳叶吊梢眉，身量苗条，体格风骚，",
+        "suffix": "\n黛玉连忙起身接见。贾母笑道：“你不",
+        "paraHint": "c3-08"
+      },
+      "quote": "粉面含春威不露，丹唇未启笑先闻。",
+      "createdAt": "2026-09-17T12:05:58.893Z",
+      "updatedAt": "2026-09-17T12:05:58.893Z",
+      "deleted": false
+    },
+    {
+      "id": "note-3578cbab-c640-443d-bdda-8382e2247328",
+      "ownerId": "user-demo",
+      "chapterId": "ch3",
+      "type": "plot",
+      "content": "“围拥”二字写出凤姐在府中的实际权势。脂本此句删改为“只见一群媳妇丫鬟围拥着一个丽人从后房门进来”，少了“人”字的口语感——切到脂本可观察这条批注的模糊重锚提示。",
+      "anchor": {
+        "quote": "只见一群媳妇丫鬟围拥着一个人从后房门进来。",
+        "prefix": "这来者系谁，这样放诞无礼？心下想时，",
+        "suffix": "\n这个人打扮与众姑娘不同，彩绣辉煌，",
+        "paraHint": "c3-07"
+      },
+      "quote": "只见一群媳妇丫鬟围拥着一个人从后房门进来。",
+      "createdAt": "2026-09-17T12:05:58.893Z",
+      "updatedAt": "2026-09-17T12:05:58.893Z",
+      "deleted": false
+    },
+    {
+      "id": "note-167d079c-5fc5-4956-8af9-4848088c0c3f",
+      "ownerId": "user-demo",
+      "chapterId": "ch3",
+      "type": "symbol",
+      "content": "摔玉是宝黛初会的核心事件：玉象征与生俱来的宿命与家族秩序，“狠命摔去”是他第一次以痴狂反抗。",
+      "anchor": {
+        "quote": "摘下那玉，就狠命摔去",
+        "prefix": "的。”宝玉听了，登时发作起痴狂病来，",
+        "suffix": "，骂道：“什么罕物，连人之高低不择，",
+        "paraHint": "c3-16"
+      },
+      "quote": "摘下那玉，就狠命摔去",
+      "createdAt": "2026-09-17T12:05:58.893Z",
+      "updatedAt": "2026-09-17T12:05:58.893Z",
+      "deleted": false
+    },
+    {
+      "id": "note-4497c969-e5e9-498a-9412-4059e8201300",
+      "ownerId": "user-demo",
+      "chapterId": "ch3",
+      "type": "narrative",
+      "content": "照应第一回木石前盟的神瑛侍者与绛珠仙草，“远别重逢”把前世盟誓落到今生初见。",
+      "anchor": {
+        "quote": "这个妹妹我曾见过的。",
+        "prefix": "等眼熟到如此！\n宝玉看罢，因笑道：“",
+        "suffix": "”贾母笑道：“可又是胡说，你又何曾见",
+        "paraHint": "c3-15"
+      },
+      "quote": "这个妹妹我曾见过的。",
+      "createdAt": "2026-09-17T12:05:58.893Z",
+      "updatedAt": "2026-09-17T12:05:58.893Z",
+      "deleted": false
+    },
+    {
+      "id": "note-83c7211f-a428-48cd-9896-61f1bd2cd47b",
+      "ownerId": "user-demo",
+      "chapterId": "ch23",
+      "type": "language",
+      "content": "宝玉直接搬演《西厢》张生的台词试探黛玉，戏文成为两人传情的暗语，也招致黛玉“带腮连耳通红”的嗔怒。",
+      "anchor": {
+        "quote": "我就是个多愁多病身，你就是那倾国倾城貌。",
+        "prefix": "黛玉笑道：“果然有趣。”宝玉笑道：“",
+        "suffix": "”林黛玉听了，不觉带腮连耳通红，登时",
+        "paraHint": "c23-06"
+      },
+      "quote": "我就是个多愁多病身，你就是那倾国倾城貌。",
+      "createdAt": "2026-09-17T12:05:58.893Z",
+      "updatedAt": "2026-09-17T12:05:58.893Z",
+      "deleted": false
+    },
+    {
+      "id": "note-cf6b067f-f365-4c8b-9972-c2fe461ce9cf",
+      "ownerId": "user-demo",
+      "chapterId": "ch23",
+      "type": "symbol",
+      "content": "花冢意象的正式建立：以“洁”自持，预演第二十七回《葬花吟》“质本洁来还洁去”。",
+      "anchor": {
+        "quote": "如今把他扫了，装在这绢袋里，拿土埋上，日久不过随土化了，岂不干净。",
+        "prefix": "旧把花遭塌了。那畸角上我有一个花冢，",
+        "suffix": "”\n宝玉听了喜不自禁，笑道：“待我放",
+        "paraHint": "c23-03"
+      },
+      "quote": "如今把他扫了，装在这绢袋里，拿土埋上，日久不过随土化了，岂不干净。",
+      "createdAt": "2026-09-17T12:05:58.893Z",
+      "updatedAt": "2026-09-17T12:05:58.893Z",
+      "deleted": false
+    },
+    {
+      "id": "note-09af7a4f-b12b-4c79-9a43-4739433916eb",
+      "ownerId": "user-demo",
+      "chapterId": "ch27",
+      "type": "narrative",
+      "content": "叙事节奏的急转：窃听、惊觉、脱身三层心理一气呵成，“金蝉脱壳”也成了宝钗嫁祸于黛玉的争议焦点。",
+      "anchor": {
+        "quote": "少不得要使个金蝉脱壳的法子。",
+        "prefix": "还没趣。如今便赶着躲了，料也躲不及，",
+        "suffix": "\n犹未想完，只听咯吱一声，宝钗便故意",
+        "paraHint": "c27-08"
+      },
+      "quote": "少不得要使个金蝉脱壳的法子。",
+      "createdAt": "2026-09-17T12:05:58.893Z",
+      "updatedAt": "2026-09-17T12:05:58.893Z",
+      "deleted": false
+    },
+    {
+      "id": "note-ef618003-aa29-4bee-a465-7a439d05082e",
+      "ownerId": "user-demo",
+      "chapterId": "ch27",
+      "type": "plot",
+      "content": "宝钗情急喊出的名字把黛玉拖入嫌疑，情节上也为后文宝黛关系的误会埋针。",
+      "anchor": {
+        "quote": "颦儿，我看你往那里藏！",
+        "prefix": "，宝钗便故意放重了脚步，笑着叫道：“",
+        "suffix": "”一面说，一面故意往前赶。那亭内的红",
+        "paraHint": "c27-09"
+      },
+      "quote": "颦儿，我看你往那里藏！",
+      "createdAt": "2026-09-17T12:05:58.893Z",
+      "updatedAt": "2026-09-17T12:05:58.893Z",
+      "deleted": false
+    },
+    {
+      "id": "note-4afb6643-cc06-435d-9a04-8663756d60d2",
+      "ownerId": "user-demo",
+      "chapterId": "ch27",
+      "type": "language",
+      "content": "《葬花吟》开篇三“花”字叠用，声如落花回旋；以问句起，自怜身世的主题直贯全篇。",
+      "anchor": {
+        "quote": "花谢花飞花满天，红消香断有谁怜？",
+        "prefix": "一面想，一面煞住脚步，听他哭道是：\n",
+        "suffix": "\n游丝软系飘春榭，落絮轻沾扑绣帘。\n",
+        "paraHint": "c27-15"
+      },
+      "quote": "花谢花飞花满天，红消香断有谁怜？",
+      "createdAt": "2026-09-17T12:05:58.893Z",
+      "updatedAt": "2026-09-17T12:05:58.893Z",
+      "deleted": false
+    },
+    {
+      "id": "note-1389efe6-298a-4348-be3b-db1a1afd0df8",
+      "ownerId": "user-demo",
+      "chapterId": "ch27",
+      "type": "symbol",
+      "content": "全诗眼目，也是黛玉生命观的自白：宁可以死亡保全洁净，也不愿被污浊的现实吞没。",
+      "anchor": {
+        "quote": "质本洁来还洁去，强于污淖陷渠沟。",
+        "prefix": "\n未若锦囊收艳骨，一抔净土掩风流。\n",
+        "suffix": "\n尔今死去侬收葬，未卜侬身何日丧？\n",
+        "paraHint": "c27-20"
+      },
+      "quote": "质本洁来还洁去，强于污淖陷渠沟。",
+      "createdAt": "2026-09-17T12:05:58.893Z",
+      "updatedAt": "2026-09-17T12:05:58.893Z",
+      "deleted": false
+    }
+  ],
+  "meta": {
+    "notesSeeded": true
+  }
+}
