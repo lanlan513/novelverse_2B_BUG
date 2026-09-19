@@ -14,6 +14,8 @@ export function useMediaQuery(query) {
 }
 
 // 跟随某个 DOM 元素的浮层定位（滚动/缩放时实时更新）
+// 依赖数组必须包含 anchorEl：否则该 effect 每次渲染后都运行，
+// setPos 又会触发再渲染，形成“更新深度超限”的死循环并白屏
 export function useAnchoredPosition(anchorEl, deps = []) {
   const [pos, setPos] = useState(null)
   useLayoutEffect(() => {
@@ -26,7 +28,7 @@ export function useAnchoredPosition(anchorEl, deps = []) {
     window.addEventListener('scroll', update, true)
     window.addEventListener('resize', update)
     return () => { window.removeEventListener('scroll', update, true); window.removeEventListener('resize', update) }
-  })
+  }, [anchorEl, ...deps])
   return pos
 }
 

@@ -53,7 +53,13 @@ global.HTMLElement = window.HTMLElement
 global.Node = window.Node
 global.MouseEvent = window.MouseEvent
 global.getComputedStyle = window.getComputedStyle
-window.matchMedia = window.matchMedia || (() => ({ matches: false, addEventListener() {}, removeEventListener() {}, addListener() {}, removeListener() {} }))
+// 模拟桌面视口：浮层走锚定定位分支（useAnchoredPosition 需要真实 anchorEl），
+// 窄屏的底部抽屉分支会绕过该 hook，无法覆盖“打开浮层”的定位逻辑
+window.matchMedia = window.matchMedia || (query => {
+  const m = /max-width:\s*(\d+)px/.exec(query || '')
+  const matches = m ? window.innerWidth <= Number(m[1]) : false
+  return { matches, media: query, addEventListener() {}, removeEventListener() {}, addListener() {}, removeListener() {} }
+})
 window.ResizeObserver = class { observe() {} unobserve() {} disconnect() {} }
 window.scrollTo = () => {}
 window.Element.prototype.scrollIntoView = () => {}

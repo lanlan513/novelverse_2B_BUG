@@ -262,7 +262,8 @@ class NotesStore {
     this._retrying = true
     this.status = 'saving'
     this.emit()
-    let firstFailure = -1
+    // 成功（或确认可放弃）的操作下标；遇到失败时，失败项及其后的所有操作必须原样保留
+    let keepFrom = -1
     for (let i = 0; i < this.queue.length; i++) {
       const op = this.queue[i]
       try {
@@ -272,12 +273,13 @@ class NotesStore {
           await request(`/notes/${op.id}`, { method: 'PATCH', body: JSON.stringify(op.patch) })
         }
       } catch (error) {
-        if (error.status === 404 && op.kind === 'patch') continue // 服务器端已不存在，放弃
-        firstFailure = i
+        if (error.status === 404 && op.kind === 'patch') continue // 服务器端已不存在，放弃该条
+        keepFrom = i // 失败的这条必须留在队首，下一轮重试，绝不能丢弃
         break
       }
     }
-    this.queue = firstFailure === -1 ? [] : this.queue.slice(firstFailure + 1)
+    // 只移除已成功（或确认放弃）的前缀；失败项及其后操作保留，继续保留“保存失败/离线”状态
+    this.queue = keepFrom === -1 ? [] : this.queue.slice(keepFrom)
     this.persistQueue()
     this._retrying = false
     this.status = this.queue.length ? (this.connected ? 'failed' : 'offline') : 'saved'
