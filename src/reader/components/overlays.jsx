@@ -26,7 +26,9 @@ export function useAnchoredPosition(anchorEl, deps = []) {
     window.addEventListener('scroll', update, true)
     window.addEventListener('resize', update)
     return () => { window.removeEventListener('scroll', update, true); window.removeEventListener('resize', update) }
-  })
+    // 仅在锚点元素变化时重新订阅；setPos 只在挂载/滚动/resize 时发生，否则会渲染死循环（React #185）
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [anchorEl, ...deps])
   return pos
 }
 

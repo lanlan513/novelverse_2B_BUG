@@ -262,9 +262,11 @@ class NotesStore {
     this._retrying = true
     this.status = 'saving'
     this.emit()
+    // 固定本轮要处理的操作：flush 期间新入队的改动不能被最后的整体替换抹掉
+    const batch = this.queue
     let firstFailure = -1
-    for (let i = 0; i < this.queue.length; i++) {
-      const op = this.queue[i]
+    for (let i = 0; i < batch.length; i++) {
+      const op = batch[i]
       try {
         if (op.kind === 'create') {
           await request('/notes', { method: 'POST', body: JSON.stringify(op.note) })
@@ -277,7 +279,11 @@ class NotesStore {
         break
       }
     }
-    this.queue = firstFailure === -1 ? [] : this.queue.slice(firstFailure + 1)
+    // 保留“失败项及其后”的操作继续重试（失败项本身绝不能丢），
+    // 同时保留 flush 期间新入队、尚未发送的操作
+    const pending = firstFailure === -1 ? [] : batch.slice(firstFailure)
+    const unsent = this.queue.slice(batch.length)
+    this.queue = pending.concat(unsent)
     this.persistQueue()
     this._retrying = false
     this.status = this.queue.length ? (this.connected ? 'failed' : 'offline') : 'saved'

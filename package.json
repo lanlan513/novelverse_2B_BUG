@@ -8,10 +8,11 @@
     "start": "node server.js",
     "build": "vite build",
     "preview": "vite preview --host 0.0.0.0",
-    "test": "npm run test:anchor && npm run test:dom && npm run test:perf && npm run test:app",
+    "test": "npm run test:anchor && npm run test:dom && npm run test:perf && npm run test:queue && npm run test:app",
     "test:anchor": "node scripts/test-anchor.mjs",
     "test:dom": "node scripts/test-dom.mjs",
     "test:perf": "node scripts/test-perf.mjs",
+    "test:queue": "node scripts/test-queue.mjs",
     "test:app": "npm run build && node scripts/test-app.mjs"
   },
   "dependencies": {
